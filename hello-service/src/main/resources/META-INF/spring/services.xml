@@ -7,6 +7,6 @@
     http://soa-springtag.dapeng.com/schema/service
     http://soa-springtag.dapeng.com/schema/service/service.xsd">
 
-    <bean id="helloService" class="com.dapeng.example.service.HelloServiceImpl"/>
-    <soa:service ref="helloService"/>
+<!--    <bean id="helloService" class="com.dapeng.example.service.HelloServiceImpl"/>-->
+<!--    <soa:service ref="helloService"/>-->
 </beans>
