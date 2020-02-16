@@ -20,9 +20,9 @@
 
     <dependencies>
         <dependency>
-            <groupId>com.dapeng.sc</groupId>
-            <artifactId>api</artifactId>
+            <groupId>com.github.dapeng-soa</groupId>
             <version>0.0.1-SNAPSHOT</version>
+            <artifactId>api</artifactId>
         </dependency>
 
 
