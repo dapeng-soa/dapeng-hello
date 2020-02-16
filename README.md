@@ -19,6 +19,8 @@
 |  |  |  |  |  |--META-INF
 |  |  |  |  |  |  |--spring
 |  |  |  |  |  |  |  |--services.xml
+|  |  |  |  |  |  |--services
+|  |  |  |  |  |  |  |--com.github.dapeng.core.ApplicationContext   SpringBoot启动类
 |  |  |--pom.xml
 |  |  |--logs
 |  |  |--docker
@@ -44,6 +46,16 @@ mvn compile dapeng:run
 cd hello-service
 mvn compile com.github.dapeng-soa:dapeng-maven-plugin:2.1.1:run
 ```
+
+## 以SpringBoot形式进行开发
+Dapeng 2.2.0 支持SpringBoot形式。具体案例请参考：com.dapeng.example.HelloServiceApp 类，
+并将其注册到 META-INF/services/com.github.dapeng.core.ApplicationContext 文件
+
+如果同时存在 ApplicationContext 定义和 META-INF/spring/services.xml，则优先使用前者。
+
+## 以Spring XML形式进行开发
+Dapeng 支持以传统的 Spring XML 方式进行开发，此时，需要定义 META-INF/spring/services.xml 文件。
+
 ## 本地测试
 - 客户端测试代码在hello-test-client，测试前确保服务已启动服务，运行HelloClientTest即可
 - 单元测试代码在hello-service，运行HelloTestCase即可
