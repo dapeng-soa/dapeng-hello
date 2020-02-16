@@ -17,7 +17,7 @@
 
         <!--增加 openfeign 支持-->
         <dependency>
-            <groupId>com.dapeng.sc</groupId>
+            <groupId>com.github.dapeng-soa</groupId>
             <artifactId>api</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
@@ -39,7 +39,6 @@
             <artifactId>hello-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-
 
 
         <dependency>
@@ -101,7 +100,7 @@
                 <artifactId>dapeng-maven-plugin</artifactId>
                 <version>${dapeng.version}</version>
             </plugin>
-            
+
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-dependency-plugin</artifactId>

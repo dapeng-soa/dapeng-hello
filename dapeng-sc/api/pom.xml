@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <groupId>com.dapeng.sc</groupId>
-        <artifactId>dapeng-sc</artifactId>
+        <groupId>com.github.dapeng-soa</groupId>
+        <artifactId>hello-spring-cloud</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath>..</relativePath>
     </parent>
