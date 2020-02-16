@@ -20,7 +20,8 @@ public class HelloServiceApp implements ApplicationContext {
 
     public static void main(String[] args) {
         // TODO support launch as a standalone SpringBootApp
-        SpringApplication.run(HelloServiceApp.class, args);
+        ConfigurableApplicationContext applicationContext = SpringApplication.run(HelloServiceApp.class, args);
+//        applicationContext.close();
     }
 
 
