@@ -12,6 +12,7 @@
         <module>hello-api</module>
         <module>hello-service</module>
         <module>hello-test-client</module>
+        <module>dapeng-sc</module>
     </modules>
 
     <properties>
