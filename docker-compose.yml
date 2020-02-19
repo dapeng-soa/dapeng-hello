@@ -21,7 +21,7 @@ services:
       - LANG=zh_CN.UTF-8
       - TZ=CST-8
       - soa_container_port=9696
-      - soa_container_ip=#host_ip
+      - host_ip=#host_ip
       - soa_zookeeper_host=#host_ip:2181
     ports:
       - "9696:9696"
