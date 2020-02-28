@@ -12,9 +12,9 @@ import javax.sql.DataSource;
 public class DbConfig {
 
     @Bean(name = "myDbSource")
-    @ConfigurationProperties(prefix = "spring.datasource.test")
+    @ConfigurationProperties(prefix = "spring.datasource")
     public DataSource localDataSource() {
-        return DataSourceBuilder.create().build();
+        return DataSourceBuilder.create().type(com.alibaba.druid.pool.DruidDataSource.class).build();
     }
 
     @Bean(name = "myDsTM")
