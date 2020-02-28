@@ -48,6 +48,12 @@
         </dependency>
 
         <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>druid</artifactId>
+            <version>1.0.17</version>
+        </dependency>
+
+        <dependency>
             <groupId>com.github.dapeng-soa</groupId>
             <artifactId>dapeng-spring</artifactId>
             <version>${dapeng.version}</version>
@@ -58,16 +64,12 @@
             <artifactId>hello-api</artifactId>
             <version>${project.version}</version>
         </dependency>
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>druid</artifactId>
-            <version>1.0.17</version>
-        </dependency>
+
         <!--<dependency>-->
-        <!--<groupId>com.github.dapeng-soa</groupId>-->
-        <!--<artifactId>dapeng-container-impl</artifactId>-->
-        <!--<version>${dapeng.version}</version>-->
-        <!--<scope>provided</scope>-->
+            <!--<groupId>com.github.dapeng-soa</groupId>-->
+            <!--<artifactId>dapeng-container-impl</artifactId>-->
+            <!--<version>${dapeng.version}</version>-->
+            <!--<scope>provided</scope>-->
         <!--</dependency>-->
 
         <dependency>

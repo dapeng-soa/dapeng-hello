@@ -28,7 +28,6 @@ public class HelloServiceImpl implements HelloService {
     private RemoteStoreService storeService;
 
     @Override
-    @Transactional(rollbackFor = Exception.class)
     public String sayHello(String name) throws SoaException {
         StoreRequest storeRequest = new StoreRequest();
         storeRequest.setNumberId(123);
