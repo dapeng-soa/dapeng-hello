@@ -8,8 +8,10 @@ import com.github.dapeng.api.dto.StoreResponse;
 import com.github.dapeng.core.SoaException;
 import com.github.dapeng.spring.annotation.DapengService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.HashMap;
+import java.util.Optional;
 
 
 /**
@@ -18,13 +20,14 @@ import java.util.HashMap;
  * email :yq1724555319@gmail.com
  */
 
-@DapengService
+@DapengService(service = HelloServiceImpl.class)
 public class HelloServiceImpl implements HelloService {
 
     @Autowired
     private RemoteStoreService storeService;
 
     @Override
+    @Transactional(rollbackFor = Exception.class)
     public String sayHello(String name) throws SoaException {
         StoreRequest storeRequest = new StoreRequest();
         storeRequest.setNumberId(123);
@@ -38,6 +41,11 @@ public class HelloServiceImpl implements HelloService {
 
     @Override
     public String sayHello2(Hello hello) throws SoaException {
-        return "hello : " + hello.name + "-> " + hello.message;
+        return "hello : " + hello.name + "-> " + hello.message + "@" + hello.time;
+    }
+
+    @Override
+    public String sayHello3(int id, Optional<Integer> age, Optional<String> name) throws SoaException {
+        return "sayHello3:" + id + ", " + age + ", " + name;
     }
 }

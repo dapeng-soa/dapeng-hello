@@ -13,7 +13,7 @@ services:
     container_name: helloService
     image: docker.dapeng.example/hello-service:1.0-SNAPSHOT
     volumes:
-      - "/data/logs/dapeng/hello-service:/dapeng-container/logs"
+      - "/Users/ever/dev/data/logs/dapeng/hello-service:/dapeng-container/logs"
     environment:
       - soa_monitor_enable=false
       - soa_transactional_enable=false
@@ -21,11 +21,26 @@ services:
       - LANG=zh_CN.UTF-8
       - TZ=CST-8
       - soa_container_port=9696
-      - host_ip=#host_ip
-      - soa_zookeeper_host=#host_ip:2181
+      - host_ip=192.168.0.104
+      - soa_zookeeper_host=192.168.0.104:2181
     ports:
       - "9696:9696"
     labels:
       - project.source=https://github.com/dapeng-soa/dapeng-hello.git
       - project.depends=helloZk
       - project.owner=struy
+
+  mysql:
+    container_name: mysql
+    image: mariadb:10.2.13
+    restart: on-failure:3
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=CST-8
+      - LANG=zh_CN.UTF-8
+    volumes:
+      - /Users/ever/dev/data/var/mysql/:/var/lib/mysql
+      - /Users/ever/dev/data/var/mysql-conf/my.cnf:/etc/mysql/my.cnf
+    ports:
+        - "3306:3306"
+
