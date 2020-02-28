@@ -12,7 +12,7 @@ import javax.sql.DataSource;
 public class DbConfig {
 
     @Bean(name = "myDbSource")
-    @ConfigurationProperties(prefix = "spring.datasource")
+    @ConfigurationProperties(prefix = "spring.datasource.test")
     public DataSource localDataSource() {
         return DataSourceBuilder.create().build();
     }
