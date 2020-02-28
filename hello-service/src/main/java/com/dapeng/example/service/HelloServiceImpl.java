@@ -20,7 +20,8 @@ import java.util.Optional;
  * email :yq1724555319@gmail.com
  */
 
-@DapengService(service = HelloServiceImpl.class)
+@DapengService(service = HelloService.class)
+@Transactional
 public class HelloServiceImpl implements HelloService {
 
     @Autowired

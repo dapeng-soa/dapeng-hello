@@ -10,11 +10,13 @@ import org.springframework.boot.autoconfigure.*;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 import java.util.Map;
 
 @EnableFeignClients({"com.github.dapeng.api"})
 @SpringBootApplication
+@EnableTransactionManagement
 public class HelloServiceApp implements ApplicationContext {
 
     private static Logger LOG = LoggerFactory.getLogger(HelloServiceApp.class);
