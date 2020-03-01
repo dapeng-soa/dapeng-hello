@@ -44,12 +44,12 @@ cd hello-service
 mvn compile dapeng:run
 或者
 cd hello-service
-mvn compile com.github.dapeng-soa:dapeng-maven-plugin:2.2.2:run -Dsoa.freq.limit.enable=false -Dsoa.apidoc.port=8192
+mvn compile com.github.dapeng-soa:dapeng-maven-plugin:2.2.3:run -Dsoa.freq.limit.enable=false -Dsoa.apidoc.port=8192
 ```
-> 注意:这里指定`-Dsoa.apidoc.port=8192`，为文档站点端口,浏览器打开http://localhost:8192即可访问
+> 注意:这里指定`-Dsoa.apidoc.port=8192`，为文档站点端口,浏览器打开 http://localhost:8192 即可访问
 
 ## 以SpringBoot形式进行开发
-Dapeng 2.2.2 支持SpringBoot形式。具体案例请参考：com.dapeng.example.HelloServiceApp 类，
+Dapeng 2.2.3 支持SpringBoot形式。具体案例请参考：com.dapeng.example.HelloServiceApp 类，
 并将其注册到 META-INF/services/com.github.dapeng.core.ApplicationContext 文件
 
 ## 以Spring XML形式进行开发

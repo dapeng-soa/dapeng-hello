@@ -59,5 +59,31 @@ service HelloService {
     无
 */
     string sayHello2(1:hello_domain.Hello hello)
+/**
+# 数据类型支持测试
+## 业务描述
+    sayHello
+## 接口依赖
+    无
+## 边界异常说明
+    无
+## 输入
+    hello
+## 前置检查
+    无
+## 权限检查
+    无
+## 逻辑处理
+    sayHello
+## 数据库变更
+    无
+## 事务处理
+    无
+## 输出
+    string
+## 事件
+    无
+*/
+    hello_domain.SupportDataType testAllDataType(1:optional hello_domain.SupportDataType dataType,2: i32 anyNumber)
 
 }(group="hello")
