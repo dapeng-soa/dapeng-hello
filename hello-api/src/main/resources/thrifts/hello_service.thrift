@@ -84,6 +84,6 @@ service HelloService {
 ## 事件
     无
 */
-    hello_domain.SupportDataType testAllDataType(1:optional hello_domain.SupportDataType dataType,2: i32 anyNumber)
+    hello_domain.SupportDataType testAllDataType(1:optional hello_domain.SupportDataType dataType,2:optional i32 anyNumber)
 
 }(group="hello")

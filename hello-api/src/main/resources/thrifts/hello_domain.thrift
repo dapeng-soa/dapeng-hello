@@ -24,6 +24,7 @@ struct Hello {
 struct SupportDataType {
 optional i32 intType,
 optional i64 longType,
+optional i16 shortType,
 optional double doubleType,
 optional bool booleanType,
 optional string stringType,
@@ -34,6 +35,7 @@ optional list<Hello> listType,
 optional set<Hello> setType,
 optional list<list<Hello>> nestedListType
 optional byte byteType,
+optional binary binaryType,
 /**
 * @datatype(name="bigdecimal")
 **/
