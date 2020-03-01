@@ -44,23 +44,24 @@ cd hello-service
 mvn compile dapeng:run
 或者
 cd hello-service
-mvn compile com.github.dapeng-soa:dapeng-maven-plugin:2.1.1:run
+mvn compile com.github.dapeng-soa:dapeng-maven-plugin:2.2.2:run -Dsoa.freq.limit.enable=false -Dsoa.apidoc.port=8192
 ```
+> 注意:这里指定`-Dsoa.apidoc.port=8192`，为文档站点端口,浏览器打开http://localhost:8192即可访问
 
 ## 以SpringBoot形式进行开发
-Dapeng 2.2.0 支持SpringBoot形式。具体案例请参考：com.dapeng.example.HelloServiceApp 类，
+Dapeng 2.2.2 支持SpringBoot形式。具体案例请参考：com.dapeng.example.HelloServiceApp 类，
 并将其注册到 META-INF/services/com.github.dapeng.core.ApplicationContext 文件
-
-如果同时存在 ApplicationContext 定义和 META-INF/spring/services.xml，则优先使用前者。
 
 ## 以Spring XML形式进行开发
 Dapeng 支持以传统的 Spring XML 方式进行开发，此时，需要定义 META-INF/spring/services.xml 文件。
+
+如果同时存在services/com.github.dapeng.core.ApplicationContext 定义和 META-INF/spring/services.xml，则优先使用前者。
 
 ## 本地测试
 - 客户端测试代码在hello-test-client，测试前确保服务已启动服务，运行HelloClientTest即可
 - 单元测试代码在hello-service，运行HelloTestCase即可
 >服务默认注册端口:9090
-默认在线测试文档端口:8080
+>默认在线测试文档端口:8080,可使用`-Dsoa.apidoc.port=8192`指定站点端口
 
 打开浏览器 http://localhost:8080 访问在线文档进行测试
 
