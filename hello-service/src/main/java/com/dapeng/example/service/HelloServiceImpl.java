@@ -13,7 +13,7 @@ import org.springframework.beans.factory.annotation.Autowired;
  * email :yq1724555319@gmail.com
  */
 
-@DapengService(service = HelloServiceImpl.class)
+// @DapengService(service = HelloServiceImpl.class)
 public class HelloServiceImpl implements HelloService {
 
     @Autowired

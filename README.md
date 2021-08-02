@@ -81,8 +81,16 @@ docker-compose up -d helloService
 以上命令会一并启动一个依赖的 zookeeper 容器 helloZk ,无需单独启动 zookeeper
 
 > 容器模式下启动服务没有在线测试站点,如果需要测试可以编写客户端服务来进行测试
+> 
 
+# use in SpringBoot mode
+1. uncomment file hello-service/src/main/resources/META-INF/services/com.github.dapeng.core.ApplicationContext
+2. uncomment @DapengService(service = HelloServiceImpl.class) annotation.
+Currently, can't using the Spring-XML mode with @DapengService.
 
+# Update 2021-08-02
+1. update pom.xml for generate code into target/generated-sources so the generated code will not managed via git.
+2. update dapeng-code-generator for some directory bugs.
 
 
 
